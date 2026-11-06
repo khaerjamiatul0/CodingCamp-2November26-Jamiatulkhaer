@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <main class="dashboard">
+
+    <!-- ── Greeting ────────────────────────────────────────── -->
+    <section class="card" id="greeting-section">
+      <p id="greeting-text"></p>
+      <div id="current-time"></div>
+      <p id="current-date"></p>
+    </section>
+
+    <!-- ── Two-column row: Timer + Quick Links ─────────────── -->
+    <div class="two-col">
+
+      <!-- Focus Timer -->
+      <section class="card" id="timer-section">
+        <h2>Focus Timer</h2>
+
+        <div class="timer-ring">
+          <svg viewBox="0 0 160 160" width="160" height="160">
+            <circle class="ring-bg"       cx="80" cy="80" r="70" />
+            <circle class="ring-progress" cx="80" cy="80" r="70" />
+          </svg>
+          <div class="ring-text">25:00</div>
+        </div>
+
+        <div class="timer-buttons">
+          <button id="btn-start" class="btn btn-primary">▶ Start</button>
+          <button id="btn-stop"  class="btn btn-secondary" disabled>⏸ Stop</button>
+          <button id="btn-reset" class="btn btn-secondary">↺ Reset</button>
+        </div>
+      </section>
+
+      <!-- Quick Links -->
+      <section class="card" id="links-section">
+        <h2>Quick Links</h2>
+
+        <div class="links-input-row">
+          <input id="link-label" type="text"  placeholder="Label (e.g. YouTube)" />
+          <input id="link-url"   type="url"   placeholder="URL (e.g. youtube.com)" />
+          <button id="link-add-btn" class="btn btn-primary">+ Add</button>
+        </div>
+
+        <div id="links-grid"></div>
+      </section>
+
+    </div><!-- /.two-col -->
+
+    <!-- ── To-Do List ──────────────────────────────────────── -->
+    <section class="card" id="todo-section">
+      <h2>To-Do List</h2>
+
+      <div class="todo-input-row">
+        <input id="todo-input" type="text" placeholder="Add a new task and press Enter…" />
+        <button id="todo-add-btn" class="btn btn-primary">+ Add</button>
+      </div>
+
+      <ul id="todo-list"></ul>
+    </section>
+
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
